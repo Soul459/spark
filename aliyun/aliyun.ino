@@ -1,19 +1,19 @@
-#include <ESP8266WiFi.h>   //安装esp8266arduino开发环境
-#include <PubSubClient.h>  //安装PubSubClient库
-#include <ArduinoJson.h>   //json  V5版本
+#include <ESP8266WiFi.h>   
+#include <PubSubClient.h>  
+#include <ArduinoJson.h>   
 #include <Servo.h>
 #include "aliyun_mqtt.h"
 //需要安装crypto库
 
 #define LED     D4
-#define WIFI_SSID        "TP-LINK_F9CB"//替换自己的WIFI
-#define WIFI_PASSWD      "18717495170"//替换自己的WIFI
+#define WIFI_SSID        "TP-LINK_F9CB"//WIFI
+#define WIFI_PASSWD      "18717495170"//WIFI密码
 
-#define PRODUCT_KEY      "a133aHJcL0o" //替换自己的PRODUCT_KEY
-#define DEVICE_NAME      "EPS8266Duan" //替换自己的DEVICE_NAME
-#define DEVICE_SECRET    "d8fb67768e3982089ae9d4fe8a0e2448"//替换自己的DEVICE_SECRET
+#define PRODUCT_KEY      "a133aHJcL0o" //PRODUCT_KEY
+#define DEVICE_NAME      "EPS8266Duan" //DEVICE_NAME
+#define DEVICE_SECRET    "d8fb67768e3982089ae9d4fe8a0e2448"//DEVICE_SECRET
 
-#define DEV_VERSION       "S-TH-WIFI-v1.0-20190220"        //固件版本信息
+#define DEV_VERSION       "S-TH-WIFI-v1.0-20190220"    
 
 #define ALINK_BODY_FORMAT         "{\"id\":\"123\",\"version\":\"1.0\",\"method\":\"%s\",\"params\":%s}"
 #define ALINK_TOPIC_PROP_POST     "/sys/" PRODUCT_KEY "/" DEVICE_NAME "/thing/event/property/post"
@@ -73,7 +73,7 @@ void mqtt_callback(char *topic, byte *payload, unsigned int length) //mqtt回调
         if (!digitalRead(LED)){
           digitalWrite(LED, HIGH);
           for(pos=90;pos>55;pos--){
-           myServo.write(pos);             // 使用pos变量数值设置伺服电机
+           myServo.write(pos);           
            delay(15);} 
         }else{
           digitalWrite(LED, LOW);
