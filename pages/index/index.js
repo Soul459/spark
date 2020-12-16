@@ -12,19 +12,19 @@ Page({
         clean: false,
         reconnectPeriod: 1000, //1000毫秒，两次重新连接之间的间隔
         connectTimeout: 30 * 1000, //1000毫秒，两次重新连接之间的间隔
-        resubscribe: true, //如果连接断开并重新连接，则会再次自动订阅已订阅的主题（默认true）
+        resubscribe: true, 
         clientId: '',
         password: '',
         username: '',
       },
 
       aliyunInfo: {
-        productKey: 'a133aHJcL0o', //阿里云连接的三元组 ，请自己替代为自己的产品信息!!
-        deviceName: 'WeixinDuan', //阿里云连接的三元组 ，请自己替代为自己的产品信息!!
-        deviceSecret: '10567e7e0fd72e8362f917ce262dd29d', //阿里云连接的三元组 ，请自己替代为自己的产品信息!!
-        regionId: 'cn-shanghai', //阿里云连接的三元组 ，请自己替代为自己的产品信息!!
-        pubTopic: '/a1qNrNN1l9s/weixin/user/weixin', //发布消息的主题
-        subTopic: '/a1qNrNN1l9s/weixin/user/get', //订阅消息的主题
+        productKey: 'a133aHJcL0o', 
+        deviceName: 'WeixinDuan', 
+        deviceSecret: '10567e7e0fd72e8362f917ce262dd29d', 
+        regionId: 'cn-shanghai', 
+        pubTopic: '/a1qNrNN1l9s/weixin/user/weixin', 
+        subTopic: '/a1qNrNN1l9s/weixin/user/get', 
       },
 
 
